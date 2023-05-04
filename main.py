@@ -1,5 +1,5 @@
 cidade = input('Qual a cidade do destino?').upper()
-cubagem = float(input('Qual o volume? (metros cúbicos)'))
+cubagem = float(input('Qual o volume? (metros cúbicos)').replace(',', '.'))
 regiao =''
 
 regiao_cidades = {'ALTO CAPIBARIBE':['CASINHAS', 'FREI MIGUELINHO', 'SANTA CRUZ DO CAPIBARIBE', 'SANTA MARIA DO CAMBUCA', 

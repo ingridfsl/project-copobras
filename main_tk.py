@@ -30,7 +30,7 @@ lbl_aviso.pack()
 
 def calcular():
     cidade = ent_cidade.get().upper()
-    cubagem = float(ent_cubagem.get())
+    cubagem = float(ent_cubagem.get().replace(',', '.'))
     regiao =''
     regiao_cidades = {'ALTO CAPIBARIBE':['CASINHAS', 'FREI MIGUELINHO', 'SANTA CRUZ DO CAPIBARIBE', 'SANTA MARIA DO CAMBUCA', 
     'SURUBIM', 'TAQUARITINGA DO NORTE', 'TORITAMA', 'VERTENTE DO LERIO', 'VERTENTES'], 'ARARIPINA': ['ARARIPINA', 'BODOCO', 'EXU', 'GRANITO',
