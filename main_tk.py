@@ -18,13 +18,18 @@ lbl_cubagem.pack()
 ent_cubagem = Entry(janela)
 ent_cubagem.pack()
 
+
 resultado = StringVar()
 
 lbl_resultado = Label(janela, textvariable=resultado)
 lbl_resultado.pack()
 
+aviso = StringVar()
+lbl_aviso = Label(janela, textvariable=aviso)
+lbl_aviso.pack()
+
 def calcular():
-    cidade = ent_cidade.get()
+    cidade = ent_cidade.get().upper()
     cubagem = float(ent_cubagem.get())
     regiao =''
     regiao_cidades = {'ALTO CAPIBARIBE':['CASINHAS', 'FREI MIGUELINHO', 'SANTA CRUZ DO CAPIBARIBE', 'SANTA MARIA DO CAMBUCA', 
@@ -47,12 +52,18 @@ def calcular():
     'RIACHO DAS ALMAS', 'SANHARO', 'SAO BENTO DO UNA', 'SAO CAITANO', 'TACAIMBO'], 'VITORIA DE SANTO ANTAO': ['CHA DE ALEGRIA', 'CHA GRANDE', 'GLORIA DO GOITA', 'POMBOS', 'VITORIA DE SANTO ANTAO'] }
     
  
+    cidade_encontrada = False
     for chave in regiao_cidades:
         if cidade in regiao_cidades[chave]:
-            regiao = str(chave)    
+            regiao = str(chave)
+            cidade_encontrada=True
+            break
 
-    valor_frete=0
-    while True:
+    if cidade_encontrada==False:
+        resultado.set('')
+        aviso.set('Cidade não encontrada. ENTRE EM CONTATO COM A LOGÍSTICA')
+        
+    while cidade_encontrada:
 
         if regiao=='ALTO CAPIBARIBE':
             if cubagem<=15.99:
@@ -156,9 +167,11 @@ def calcular():
             else:
                 valor_frete = cubagem*50
             
+        aviso.set('')
+        resultado.set(f"Valor do frete: {valor_frete:.2f}")
         break
 
-    resultado.set(f"Valor do frete: {valor_frete:.2f}")
+    
 
 btn_calcular = Button(janela, text="Calcular", command=calcular)
 btn_calcular.pack()
