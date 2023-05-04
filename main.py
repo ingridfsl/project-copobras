@@ -1,4 +1,4 @@
-cidade = input('Qual a cidade do destino?')
+cidade = input('Qual a cidade do destino?').upper()
 cubagem = float(input('Qual o volume? (metros cúbicos)'))
 regiao =''
 
@@ -21,13 +21,18 @@ regiao_cidades = {'ALTO CAPIBARIBE':['CASINHAS', 'FREI MIGUELINHO', 'SANTA CRUZ 
 'VALE DO IPOJUCA':['ALAGOINHA', 'BELO JARDIM', 'BEZERROS', 'BREJO DA MADRE DE DEUS', 'CACHOEIRINHA', 'CAPOEIRAS', 'CARUARU', 'GRAVATA', 'JATAUBA', 'PESQUEIRA', 'POCAO', 
 'RIACHO DAS ALMAS', 'SANHARO', 'SAO BENTO DO UNA', 'SAO CAITANO', 'TACAIMBO'], 'VITORIA DE SANTO ANTAO': ['CHA DE ALEGRIA', 'CHA GRANDE', 'GLORIA DO GOITA', 'POMBOS', 'VITORIA DE SANTO ANTAO'] }
 
-
+cidade_encontrada = False
 for chave in regiao_cidades:
     if cidade in regiao_cidades[chave]:
         regiao = str(chave)
+        cidade_encontrada=True
+        break
+
+if cidade_encontrada==False:
+    print('Cidade não encontrada. ENTRE EM CONTATO COM A LOGÍSTICA')
         
 
-while True:
+while cidade_encontrada:
 
     if regiao=='ALTO CAPIBARIBE':
         if cubagem<=15.99:
@@ -130,7 +135,7 @@ while True:
             valor_frete = cubagem*54
         else:
             valor_frete = cubagem*50
-           
+
+    print(f'{valor_frete:.2f}')    
     break
     
-print(f'{valor_frete:.2f}')
