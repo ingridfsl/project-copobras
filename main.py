@@ -128,13 +128,13 @@ while cidade_encontrada:
              
     if regiao=='VALE DO IPANEMA' or regiao=='VALE DO IPOJUCA':
         if cubagem<=15.99:
-            valor_frete = cubagem*60
+            valor_frete = cubagem*52
         elif 16<=cubagem<=40.99:
-            valor_frete = cubagem*57
+            valor_frete = cubagem*49
         elif 41<=cubagem<=59.99:
-            valor_frete = cubagem*54
+            valor_frete = cubagem*45
         else:
-            valor_frete = cubagem*50
+            valor_frete = cubagem*42
 
     print(f'{valor_frete:.2f}')    
     break
