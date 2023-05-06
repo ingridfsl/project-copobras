@@ -35,127 +35,148 @@ if cidade_encontrada==False:
 while cidade_encontrada:
 
     if regiao=='ALTO CAPIBARIBE':
-        if cubagem<=7:
-            valor_frete = 7*59
-        elif 7<cubagem<=15.99:
-            valor_frete = cubagem*59
+        if cubagem<=15.99:
+            valor_constante = 59
+            valor_frete = cubagem * valor_constante    
         elif 16<=cubagem<=40.99:
-            valor_frete = cubagem*55
+            valor_constante = 55
+            valor_frete = cubagem*valor_constante 
         elif 41<=cubagem<=59.99:
-            valor_frete = cubagem*52
+            valor_constante=52
+            valor_frete = cubagem*valor_constante 
         else:
-            valor_frete = cubagem*49
-            
+            valor_constante = 49
+            valor_frete = cubagem*valor_constante 
+                
     if regiao=='ARARIPINA':
-        if cubagem<=7:
-            valor_frete = 7*80
-        elif 7<cubagem<=15.99:
-            valor_frete = cubagem*80
+        if cubagem<=15.99:
+            valor_constante = 80
+            valor_frete = cubagem*valor_constante
         elif 16<=cubagem<=40.99:
-            valor_frete = cubagem*77
+            valor_constante = 77
+            valor_frete = cubagem*valor_constante
         elif 41<=cubagem<=59.99:
-            valor_frete = cubagem*74
+            valor_constante = 74
+            valor_frete = cubagem*valor_constante
         else:
-            valor_frete = cubagem*70
+            valor_constante = 70
+            valor_frete = cubagem*valor_constante
             
     if regiao=='BREJO PERNAMBUCANO':
-        if cubagem<=7:
-            valor_frete = 7*52
-        elif 7<cubagem<=15.99:
-            valor_frete = cubagem*52
+        if cubagem<=15.99:
+            valor_constante = 52
+            valor_frete = cubagem*valor_constante
         elif 16<=cubagem<=40.99:
-            valor_frete = cubagem*49
+            valor_constante = 49
+            valor_frete = cubagem*valor_constante
         elif 41<=cubagem<=59.99:
-            valor_frete = cubagem*45
+            valor_constante = 45
+            valor_frete = cubagem*valor_constante
         else:
-            valor_frete = cubagem*42
-             
+            valor_constante = 42
+            valor_frete = cubagem*valor_constante
+            
 
     if regiao=='GARANHUNS' or regiao=='ITAPARICA' or regiao=='MATA MERIDIONAL PERNAMBUCANA' or regiao=='MATA SETENTRIONAL PERNAMBUCANA' or regiao=='MEDIO CAPIBARIBE':
-        if cubagem<=7:
-            valor_frete = 7*57
-        elif 7<cubagem<=15.99:
-            valor_frete = cubagem*57
+        if cubagem<=15.99:
+            valor_constante = 57
+            valor_frete = cubagem*valor_constante
         elif 16<=cubagem<=40.99:
-            valor_frete = cubagem*54
+            valor_constante = 54
+            valor_frete = cubagem*valor_constante
         elif 41<=cubagem<=59.99:
-            valor_frete = cubagem*50
+            valor_constante = 50
+            valor_frete = cubagem*valor_constante
         else:
-            valor_frete = cubagem*47
-                   
+            valor_constante = 47
+            valor_frete = cubagem*valor_constante
+                
 
     if regiao=='ITAMARACA' or regiao=='SUAPE':
-        if cubagem<=7:
-            valor_frete = 7*47
-        elif 7<cubagem<=15.99:
-            valor_frete = cubagem*47
+        if cubagem<=15.99:
+            valor_constante = 47
+            valor_frete = cubagem*valor_constante
         elif 16<=cubagem<=40.99:
-            valor_frete = cubagem*44
+            valor_constante = 44
+            valor_frete = cubagem*valor_constante
         elif 41<=cubagem<=59.99:
-            valor_frete = cubagem*40
+            valor_constante = 40
+            valor_frete = cubagem*valor_constante
         else:
-            valor_frete = cubagem*37
+            valor_constante = 37
+            valor_frete = cubagem*valor_constante
                     
     if regiao=='PAJEU':
-        if cubagem<=7:
-            valor_frete = 7*59
-        elif 7<cubagem<=15.99:
-            valor_frete = cubagem*59
+        if cubagem<=15.99:
+            valor_constante = 59
+            valor_frete = cubagem*valor_constante
         elif 16<=cubagem<=40.99:
-            valor_frete = cubagem*55
+            valor_constante = 55
+            valor_frete = cubagem*valor_constante
         elif 41<=cubagem<=59.99:
-            valor_frete = cubagem*52
+            valor_constante = 52
+            valor_frete = cubagem*valor_constante
         else:
-            valor_frete = cubagem*49         
+            valor_constante = 49
+            valor_frete = cubagem*valor_constante         
     
     if regiao=='PETROLINA':
-        if cubagem<=7:
-            valor_frete = 7*70
-        elif 7<cubagem<=15.99:
-            valor_frete = cubagem*70
+        if cubagem<=15.99:
+            valor_constante = 70
+            valor_frete = cubagem*valor_constante
         elif 16<=cubagem<=40.99:
-            valor_frete = cubagem*67
+            valor_constante = 67
+            valor_frete = cubagem*valor_constante
         elif 41<=cubagem<=59.99:
-            valor_frete = cubagem*64
+            valor_constante = 64
+            valor_frete = cubagem*valor_constante
         else:
-            valor_frete = cubagem*60
-             
+            valor_constante = 60
+            valor_frete = cubagem*valor_constante
+            
     if regiao=='RECIFE' or regiao=='VITORIA DE SANTO ANTAO':
-        if cubagem<=7:
-            valor_frete = 7*49
-        elif 7<cubagem<=15.99:
-            valor_frete = cubagem*49
+        if cubagem<=15.99:
+            valor_constante = 49
+            valor_frete = cubagem*valor_constante
         elif 16<=cubagem<=40.99:
-            valor_frete = cubagem*45
+            valor_constante = 45
+            valor_frete = cubagem*valor_constante
         elif 41<=cubagem<=59.99:
-            valor_frete = cubagem*42
+            valor_constante = 42
+            valor_frete = cubagem*valor_constante
         else:
-            valor_frete = cubagem*39
-             
+            valor_constante = 39
+            valor_frete = cubagem*valor_constante
+            
     if regiao=='SALGUEIRO' or regiao=='SERTAO DO MOXOTO':
-        if cubagem<=7:
-            valor_frete = 7*60
-        elif 7<cubagem<=15.99:
-            valor_frete = cubagem*60
+        if cubagem<=15.99:
+            valor_constante = 60
+            valor_frete = cubagem*valor_constante
         elif 16<=cubagem<=40.99:
-            valor_frete = cubagem*57
+            valor_constante = 57
+            valor_frete = cubagem*valor_constante
         elif 41<=cubagem<=59.99:
-            valor_frete = cubagem*54
+            valor_constante = 54
+            valor_frete = cubagem*valor_constante
         else:
-            valor_frete = cubagem*50
-             
+            valor_constante = 50
+            valor_frete = cubagem*valor_constante
+            
     if regiao=='VALE DO IPANEMA' or regiao=='VALE DO IPOJUCA':
-        if cubagem<=7:
-            valor_frete = 7*52
-        elif 7<cubagem<=15.99:
-            valor_frete = cubagem*52
+        if cubagem<=15.99:
+            valor_constante = 52
+            valor_frete = cubagem*valor_constante
         elif 16<=cubagem<=40.99:
-            valor_frete = cubagem*49
+            valor_constante = 49
+            valor_frete = cubagem*valor_constante
         elif 41<=cubagem<=59.99:
-            valor_frete = cubagem*45
+            valor_constante = 45
+            valor_frete = cubagem*valor_constante
         else:
-            valor_frete = cubagem*42
+            valor_constante = 42
+            valor_frete = cubagem*valor_constante
 
-    print(f'{valor_frete:.2f}')    
+    print(f'Valor do frete: {valor_frete:.2f}')
+    print(f'Valor tabelado do m3: {valor_constante}')    
     break
     
