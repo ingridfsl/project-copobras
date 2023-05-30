@@ -1,9 +1,9 @@
 
-from src.dic_regiao_cidade import regiao_cidades
-from src.functions import *
+from modules.dic_regiao_cidade import regiao_cidades
+from modules.functions import *
 
 cidade = input('Qual a cidade do destino?').upper()
-cubagem = float(input('Qual o volume? (metros cúbicos)').replace(',', '.'))
+cubagem = float(input('Qual o volume? (m\u00b3)').replace(',', '.'))
 regiao =''
 
 cidade_encontrada = False
@@ -59,8 +59,8 @@ while cidade_encontrada:
         valor_frete, valor_constante = function_10(cubagem)
         
 
-    print(f'Valor do frete: {valor_frete:.2f}')
-    print(f'Valor tabelado do m3: {valor_constante}')    
+    print(f'Valor do frete: R$ {valor_frete:.2f}')
+    print(f'Valor tabelado do m\u00b3: {valor_constante}')    
    
     break
 
